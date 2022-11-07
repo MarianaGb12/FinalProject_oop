@@ -1,0 +1,117 @@
+titulo, autor, año, categoria
+Gilead, Marilynne Robinson,2004, Ficción
+Spider's Web,Charles Osborne, 1954, Novela 
+The One Tree, Stephen R. Donaldson, 1982, Fantasia
+Rage of angels, Sidney Sheldon,1983, Ficcion
+The Four Loves, Clive Staples Lewis, 1960, Literatura Cristiana
+The Problem of Pain,Clive Staples Lewis, 1940, Literatura Cristiana
+Empires of the Monsoon, Richard Hall, 1996, Historia 
+Master of the Game, Sidney Sheldon, 1982, Ficcion
+If Tomorrow Comes,Sidney Sheldon, 1985, Misterio
+Assassin's Apprentice,Robin Hobb,1995, Fantasia
+The Once and Future King, Terence Hanbury White, 1958, Fantasia
+Murder in LaMut, Raymond E. Feist, 2002, Fantasia
+Jimmy the Hand, Raymond E. Feist, 2003, Ciencia Ficcion
+Well of Darkness, Margaret Weis, 2000, Fantasia
+Witness for the Prosecution & Selected Plays, Agatha Christie, 1995, Crimen
+Little House on the Prairie, Laura Ingalls Wilder, 1935, Clasico
+Murder Among Friends, Steve Demaree, 2013, Misterio
+Glamorous Illusions, Lisa Tawn Bergren, 2012, Romance
+Post Captain, Patrick O'Brian, 1972, Historia
+The Reverse of the Medal, Patrick O'Brian, 1986, Ficcion
+A pocket Full of Rye,Agatha Christie, 1953, Misterio
+The Years of Rice and Salt, Kim Stanley Robinson, 2002, Ciencia Ficcion
+The Cursed Sea, Lauren DeStefano, 2018, Fantasia
+The Gravity´s Rainbow, Thomas Pynchon, 1973, Ficcion
+The Wise Woman, Philippa Gregory, 1992, Romance
+Girls' Night in, Jessica Adams, 2004, Juvenil
+Bookends, Jane Green, 2000, Ficción
+Cocktails for Three, Madeleine Wickham, 2000, Romance
+The Bonesetter's Daughter, Amy Tan, 2001, Historia
+´Tis: A Memoir, Frank McCourt ,1999, Memoir
+The Ocean at the End of the Lane, Neil Gailman, 2013, Fantasia
+In a Pickle, Cindy Dorminy, 2020, Romance
+You Are Not Alone, Greer Hendricks and Sarah Pekkanen, 2020, Thriller
+The Princess of the Chalet School,Elinor Mary Brent-Dyer, 1927, Juvenil
+Koko, Peter Straub,1988, Thriller
+Tree and Leaf, John Ronald Reuel Tolkien, 1964, Fantasia
+Partners in Crime, Agatha Christie, 1929, Misterio
+Murder in Mesopotamia, Agatha Christie, 1936, Misterio
+The Fellowhip of the Ring, John Ronald Reuel Tolkien, 1954, Fantasia
+All Families are Psychotic,Douglas Coupland, 2001, Ficcion
+Death in the Clouds, Agatha Christie, 1935, Misterio
+Appointment with Death, Agatha Christie, 1938, Misterio
+Hallowe'en Party, Agatha Christie, 1969, Misterio
+The Big Four, Agatha Christie,1927, Misterio
+The Thirteen Problems, Agatha Christie, 1932, Misterio
+They Do it with Mirrors, Agatha Christie, 1952, Crimen
+The Lord of the Rings, J. R. R. Tolkien, 1955, Ciencia Ficcion
+The Metaphysical Club, Louis Menand, 2001, Historia
+The illustrated man, Ray Bradbury, 1951, Ficcion
+Wilkins' Tooth, Diana Wynne Jones, 1973, Fantasia
+Cut, Patricia McCormick, 2000, Ficcion 
+Lirael,Garth Nix, 2001, Fantasia
+Tales from the Perilous Realm, John Ronald Reuel Tolkien, 1997, Fantasia
+Breaking Open the Head, Daniel Pinchbeck, 2002, Nonfiction
+The Yiddish Policemen's Union, Michael Chabon,2007, Ficcion 
+"Beware, Princess Elizabeth", Carolyn Meyer,2001, Historia 
+The Family Way, Rhys Bowen,2013, Misterio
+Endless Night, Agatha Christie,1967, Ficcion 
+How to be Alone, Jonathan Franzen,2002, Memoir 
+The Mysterious Mr. Quin,Agatha Christie, 1930, Misterio 
+The Listerdale Mystery,Agatha Christie, 1930, Misterio 
+The Real Trial of Oscar Wilde, Merlin Holland,2003, Historia 
+I Can Read with Me Eyes Shut!, Dr. Seuss, 1978, Infantil 
+"Oh, the Places You'll Go!", Dr. Seuss, 1930, Infantil 
+If I Die in a Combat Zone, Tim O'Brien, 1973, Memoir 
+The Return of the King, J. R. R. Tolkien, 1955, Fantasia
+The Silmarillion, John Ronald Reuel Tolkien, 1977, Fantasia
+I Wish that I Had Duck Feet,Dr. Seuss, 1965, Infantil
+Oh Say Can You Say?, Dr. Seuss, 1979, Infantil 
+There's a Boy in the Girls' Bathroom, Louis Sachar, 1987, Infantil 
+Microserfs, Douglas Coupland,1995, Ficcion 
+Miss Wyoming, Douglas Coupland,1999, Ficcion 
+Where Rainbows End, Cecelia Ahern, 2004, Romance 
+Murder on the Orient Express, Agatha Christie,1934, Misterio 
+The Art of The Lord of the Rings, Gary Russell,2001, Fantasia 
+The Known World, Edward P. Jones, 2003, Ficcion 
+Naked Lunch,The Restored Text,William S. Burroughs, 1959, Ficcion 
+Tropic of Cancer, Henry Miller,1934, Ficcion 
+Close Range, Annie Proulx, 1999,Ficcion 
+The Love of the Last Tycoon, F. Scott Fitzgerald, 1941, Ficcion 
+The Song of Rhiannon, Evangeline Walton,Fiction, 1972, Fantasia 
+Heart Songs and Other Stories, Annie Proulx, 1988, Ficcion
+The voyage of the Dawn Treader, Clive Staples Lewis, 1952, Juvenil 
+The Short Stories of Ernest Hemingway, Ernest Hemingway,1987, Ficcion
+Reason in History,Georg Wilhelm Friedrich Hegel,1965, Filosofia 
+The Elements of Style, William Strunk , 1918, Clasico
+Spandau:The Secret Diaries,Albert Speer,1975, Historia 
+The Rumble Seat Pony, Clarence William Anderson,1971, Infantil
+The Journey with Grandmother,Edith Unnerstad,1956, Infantil 
+Tyranny of the Majority:Funamental Fairness in Representative Democracy,Lani Guinier, 1994, Historia 
+The Origins of the Civil Rights Movement, Aldon D. Morris, 1984, Historia 
+Presidential Power and the Modern Presidents:The Politics of Leadership from Roosevelt to Reagan, Richard E. Neustadt, 1960, Historia 
+"Rest, Rabbit, Rest", Jacquelyn Reinach, 1978, Infantil
+Where the Red Fern Grows,Wilson Rawls,1961, Infantil 
+Poppy's Return, Avi, 2005, Infantil 
+Diary of a Spider,Doreen Cronin,1996, Infantil 
+An Old-Fashioned Thanksgiving,Louisa May Alcott, 1868, Infantil
+The Paradox of Choice:Why More Is Less,Barry Schwartz, 2004, Psicologia 
+How to Read Literature Like a Professor,Thomas C. Foster,2003, Literatura 
+The Amazing Maurice and His Educated Rodents, Terry Pratchett, 2001, Fantasia 
+The Wee Free Men, Terry Pratchett, 2003, Fantasia 
+Going Postal, Terry Pratchett,2004, Ficcion 
+Modern Mind: An Intellectual History of the 20th Century,Peter Watson,2000, Historia 
+She Went All the Way, Meg Cabot, 2002, Romance 
+A Year in the Life of William Shakespeare:1599,James Shapiro, 2005, Historia 
+Lucy Sullivan Is Getting Married, Marian Keyes,1996, Romance 
+The Terminal Man, Michael Crichton,1972, Thriller 
+The Art of the Novel,Milan Kundera, 1986, Literatura 
+The Bromeliad Trilogy, Terry Pratchett, 1989, Fantasia 
+"Merry Christmas, Amelia Bedelia", Peggy Parish, 1986, Infantil 
+The Bourne Identity,Robert Ludlum, 1980, Thriller
+The thief of always: A fable, Clive Barker, 1992, Fantasia
+The Illustrated Alchemist:A Fable About Following Your Dream,Paulo Coelho, 1988, Fantasia
+Mars and Venus Book of Days:365 Inspriations to Enrich Your Relationships,John Gray,1998, Autoayuda 
+The Last of the Really Great Whangdoodles, Julie Andrews Edwards,1974, Fantasia
+Today I Feel Silly & Other Moods That Make My Day, Jamie Lee Curtis, 1998, Infantil
