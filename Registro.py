@@ -23,17 +23,6 @@ class Usuario:
         file.close()
         self.exito_registro()
 
-    def Iniciarsesion(self ):
-        print("Escoja una opción: ")
-        eleccion = int(input("1) Iniciar Sesión || 2) Nuevo Registro "))
-        if eleccion == 1:
-            return self.Verifica_login()
-        elif eleccion == 2:
-            return self.Registro()
-        else:
-            raise TypeError
-        
-
     def Verifica_login(self):
         print("Acceso a la cuenta. Introduza sus datos ")
         self.nomusuario = (input("Nombre de usuario:"))
@@ -65,7 +54,7 @@ class Usuario:
 
     # "Inicio de sesión exitoso"
     def exito_login(self):
-        print("Ha ingresado con exito")
+        print("Ha ingresado con éxito")
 
     # "El usuario se ha registrado correctamente"
     def exito_registro(self):
