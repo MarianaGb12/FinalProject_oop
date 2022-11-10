@@ -9,43 +9,73 @@ class Usuario:
         self.Registro_usuario()
     
     def Registro_usuario(self):
-        usuario_info = self.nomusuario
-        contraseña_info = self.contraseña
-    
-        file = open("usuarios.txt", "w") #CREACION DE ARCHIVO CON "nombre" y "clave"
-        file.write(usuario_info + "\n")
-        file.write(contraseña_info)
+        # Lectura de archivo, para verificar que no exista el usuario
+        file = open("usuarios.txt", "r") 
+        info = file.read()
+        if self.nomusuario in info:
+            return "Usuario ya existe. Por favor intente nuevamente"
         file.close()
 
-        print("Registro completado con éxito")
+        # CREACION DE Archivo CON "nombre" y "contraseña" del usuario
+        file = open("usuarios.txt", "w") 
+        info = (info + " " + self.nomusuario + " " + self.contraseña)
+        file.write(info)
+        file.close()
+        self.exito_registro()
 
     def Iniciarsesion(self ):
-        while(True):
-            eleccion = int(input(print("1) Iniciar Sesión || 2) Nuevo Registro || 3)Salir")))
-            if eleccion == 1:
-                self.Verifica_login()
-            elif eleccion == 2:
-                self.Registro()
-            elif eleccion == 3:
-                break
-            else:
-                print("Intente más tarde")
+        print("Escoja una opción: ")
+        eleccion = int(input("1) Iniciar Sesión || 2) Nuevo Registro "))
+        if eleccion == 1:
+            return self.Verifica_login()
+        elif eleccion == 2:
+            return self.Registro()
+        else:
+            raise TypeError
         
 
     def Verifica_login(self):
-        pass
+        print("Acceso a la cuenta. Introduza sus datos ")
+        self.nomusuario = (input("Nombre de usuario:"))
+        self.contraseña = (input("Contraseña:"))
         
-        
-    
+        # CREACION DE ARCHIVO CON "nombre" y "contraseña" en modo lectura
+        file = open("usuarios.txt", "r") 
+        leer = file.read() 
+        leer = leer.split()
+
+        """
+        Se verifica que el usuario se 
+        encuentre en el archivo.
+        Si es asi, se verifica la 
+        contraseña en el mismo. Si 
+        esta no es la misma, arroja 
+        un error para el nombre de 
+        usuario o contraseña ingresados. 
+        """
+        if self.nomusuario in leer:
+            index = leer.index(self.nomusuario) + 1
+            contraseña_usuario = leer[index]
+            if contraseña_usuario == self.contraseña:
+                return self.exito_login()
+            else:
+                return self.no_cont()
+        else:
+            return self.no_usuario()
+
+    # "Inicio de sesión exitoso"
     def exito_login(self):
         print("Ha ingresado con exito")
 
-# "Contraseña incorrecta".
- 
+    # "El usuario se ha registrado correctamente"
+    def exito_registro(self):
+        print("Registr completado con éxito")
+
+    # "Contraseña incorrecta".
     def no_cont(self):
         print("Contraseña incorrecta ")
  
-# "Usuario no encontrado".
+    # "Usuario no encontrado".
     def no_usuario(self):
         print("Usuario no encontrado")
 # %%
