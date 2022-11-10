@@ -2,9 +2,17 @@
 #%%
 import pandas as pd
 class Basededatos:
-    df1 = pd.read_csv('https://drive.google.com/uc?export=download&id=1ak6fsjArzXSFHh0cpycCx58lAJvcrV4Q')
-    df1 = df1.drop(['subtitle','description','isbn13','isbn10','num_pages','ratings_count','thumbnail'], axis=1)
-    df1['categories'] = df1['categories'].replace({'Fiction':'Ficción','American fiction':'Ficción',
+    def __init__(self, df1:str):
+        # cargamos la base de datos en el constructor
+        self.df1 = pd.read_csv('https://drive.google.com/uc?export=download&id=1ak6fsjArzXSFHh0cpycCx58lAJvcrV4Q')
+        # eliminamos los filtros de la base de datos que no necesitamos
+        self.df1 = self.df1.drop(['subtitle','description','isbn13','isbn10','num_pages','ratings_count','thumbnail'], axis=1)
+        """
+          cambiamos los nombres de las categorías
+          a español para facilitar la comprensión
+          de las recomendaciones.
+        """ 
+        self.df1['categories'] = self.df1['categories'].replace({'Fiction':'Ficción','American fiction':'Ficción',
                                             'Detective and mystery stories':'Policial',
                                             'Christian life':'Lit.cristiana',
                                             'Authors, English':'Informativo',
@@ -223,7 +231,7 @@ class Basededatos:
                                             'Indic fiction (English)':'Ficción',
                                             'Political Science':'Ciencia'
                                         })
-    df1 = df1.rename(columns={'title':'Titulo',
+        self.df1 = self.df1.rename(columns={'title':'Titulo',
                         'authors':'Autor',
                         'categories':'Categoria',
                         'published_year':'Año_publicado',
