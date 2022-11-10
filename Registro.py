@@ -58,7 +58,7 @@ class Usuario:
 
     # "El usuario se ha registrado correctamente"
     def exito_registro(self):
-        print("Registr completado con éxito")
+        print("Registro completado con éxito")
 
     # "Contraseña incorrecta".
     def no_cont(self):
