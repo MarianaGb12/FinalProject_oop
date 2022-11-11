@@ -1,3 +1,5 @@
+from Menu import Menu
+
 class Usuario:
     def __init__(self):
         pass
@@ -22,6 +24,7 @@ class Usuario:
         file.write(info)
         file.close()
         self.exito_registro()
+        
 
     def Verifica_login(self):
         print("Acceso a la cuenta. Introduza sus datos ")
@@ -54,11 +57,14 @@ class Usuario:
 
     # "Inicio de sesión exitoso"
     def exito_login(self):
-        print("Ha ingresado con éxito")
+        print("Ha ingresado con exito")
+        menu = Menu("")
+        menu.Menu()
 
     # "El usuario se ha registrado correctamente"
     def exito_registro(self):
         print("Registro completado con éxito")
+        
 
     # "Contraseña incorrecta".
     def no_cont(self):
@@ -67,6 +73,3 @@ class Usuario:
     # "Usuario no encontrado".
     def no_usuario(self):
         print("Usuario no encontrado")
-# %%
-cuenta = Usuario()
-cuenta.Iniciarsesion()
