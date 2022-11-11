@@ -8,11 +8,9 @@ class Menu(Basededatos):
         print(self.df1.head(15))
         while(True):
             print("Desea agregar libros a su estante ")
-            print("1)Si || 2)No : ")
-            op = int(input("Escoja una opción: \n"))
+            op = int(input("1-Si || 2-No : "))
             if op == 1:
-                print("\n1)Estantería LIBROS LEÍDOS || 2)Estantería QUIERO LEER || 3) Atrás  ")
-                op2= int(input("Elija una opción : "))
+                op2 = int(input("1)Estantería LIBROS LEÍDOS || 2)Estantería QUIERO LEER || 3) Atrás:  "))
                 if op2 == 1: 
                     self.estante_leidos()
 
@@ -21,9 +19,9 @@ class Menu(Basededatos):
                             
                 elif op2 == 3:
                     break
-
                 else:
                     print("Opción inválida")
+
             elif op == 2:
                 break
 
@@ -31,8 +29,8 @@ class Menu(Basededatos):
                 print("Opción inválida")
 
     def estante_leidos(self):
-
-        print("\n*** Estante LIBROS LEÍDOS ***")
+        print("-----------------------------------------------------")
+        print("               Estante LIBROS LEÍDOS                 ")
         while (True):
             print("1- Agregar libro a leídos || 2-Ver estante LIBROS LEÍDOS || 3-Atrás")
             opcion2 = int(input("Escoja una opción: "))
@@ -40,24 +38,25 @@ class Menu(Basededatos):
             if opcion2 == 1:  
                 # apertura del archivo en modo escritura
                 archivo_leidos = open("leidos.txt", "w")
-                        
-                print("* Agregar libro a Estante Leídos *")
                 librosleidos = []
-                nuevolibro = input(" 1-Añadir libro || 2-Regresar : ")
-                while nuevolibro == "1":
-                    librousuario = input("Ingrese el título: ")
-                    librosleidos.append(librousuario)
-                    nuevolibro = input("¿Desea añadir más libros: 1.Si , 2.No :")
-                print(librosleidos)
-
+                while(True):
+                    nuevolibro = int(input(" 1-Añadir libro || 2-Regresar : "))
+                    if nuevolibro == 1:
+                        librousuario = input("Ingrese el título: ")
+                        librosleidos.append(librousuario)
+                    elif nuevolibro == 2:
+                        break
+                    else:
+                        return TypeError
                 # recorremos la lista y agregamos cada titulo al archivo
                 for leido in librosleidos:
-                    print(leido, file=archivo_leidos)
+                    print(leido, file = archivo_leidos)
                 # cierre del archivo
                 archivo_leidos.close()
 
             elif opcion2 == 2:
-                print("* LIBROS LEÍDOS *")
+                print("-----------------------------------------------------")
+                print("                 LIBROS LEÍDOS                       ")
                 with open("leidos.txt") as archivo:
                     print(archivo.readlines())
                 print("\n")
@@ -68,23 +67,24 @@ class Menu(Basededatos):
                 print("Opción inválida")
 
     def estante_quieroleer(self):
-
-        print("\n*** Estante QUIERO LEER ***")
+        print("-----------------------------------------------------")
+        print("                Estante QUIERO LEER                  ")
         while (True):
             print("1- Agregar libro a Quiero Leer || 2-Ver estante QUIERO LEER || 3-Atrás")
             opcion3 = int(input("Escoja una opción: "))
             if opcion3 == 1:
                 # apertura del archivo en modo escritura
                 archivo_quieroleer = open("quiero_leer.txt", "w")
-                        
-                print("Agregar libro a Estante Quiero Leer")
                 wanttoread = []
-                nuevlibro = input(" 1-Añadir libro || 2-Regresar ")
-                while nuevlibro == "1":
-                    libro_usuario = input("Ingrese título: ")
-                    wanttoread.append(libro_usuario)
-                    nuevlibro = input("¿Desea añadir más libros: 1)Si , 2)No")
-                print(wanttoread)
+                while(True):
+                    nuevlibro = int(input(" 1-Añadir libro || 2-Regresar "))
+                    if nuevlibro == 1:
+                        libro_usuario = input("Ingrese título: ")
+                        wanttoread.append(libro_usuario)
+                    elif nuevlibro == 2:
+                        break
+                    else:
+                        return TypeError
 
                 # Recorremos la lista y agregamos cada titulo al archivo
                 for want in wanttoread:
@@ -93,7 +93,8 @@ class Menu(Basededatos):
                 archivo_quieroleer.close()
 
             elif opcion3 == 2:
-                print("* QUIERO LEER *")
+                print("-----------------------------------------------------")
+                print("                  QUIERO LEER                        ")
                 with open("quiero_leer.txt") as archivo:
                     print(archivo.readlines())
                 print("\n")
@@ -105,9 +106,7 @@ class Menu(Basededatos):
                 print("Opción inválida")
 
     def Buscar(self):
-        print("\n")
         while(True):
-            print("- BUSCADOR -")
             print("1- Buscar por título")
             print("2- Buscar por puntuación")
             print("3- Buscar por fecha de publicación")
@@ -116,20 +115,25 @@ class Menu(Basededatos):
             filtro = int(input("Escoja una opción: "))
             
             if filtro == 1:
+                print("-----------------------------------------------------")
+                print("               Buscar por título                     ")
                 titulo = input("Ingrese título: ")
                 self.dfb = self.df1.loc[self.df1['Titulo'] == titulo]
                 print(self.dfb.head(10))
             
             elif filtro == 2:
-                print("Buscar por puntuación \n")
+                print("-----------------------------------------------------")
+                print("             Buscar por puntuación                   ")
                 self.Buscar_puntuacion()
 
             elif filtro == 3:
-                print("Buscar por fecha de publicación \n")
+                print("-----------------------------------------------------")
+                print("        Buscar por fecha de publicación              ")
                 self.Buscar_fecha()
 
             elif filtro == 4:
-                print("Buscar Categoria \n")
+                print("-----------------------------------------------------")
+                print("               Buscar Categoria                      ")
                 self.Buscar_categoria()
 
             elif filtro == 5:
@@ -140,7 +144,7 @@ class Menu(Basededatos):
 
 
     def Buscar_puntuacion(self):
-        puntaje = int(input('Ingrese un puntaje (1-5): '))
+        puntaje = int(input('Ingrese un puntaje (De 1-5): '))
         self.dfe = self.df1.sort_values('Puntuación',ascending=False)
         self.dfe = self.dfe.drop(['Autor','Categoria','Año_publicado'], axis=1)
 
@@ -170,7 +174,6 @@ class Menu(Basededatos):
         print(self.dfe.head(10))
 
     def Buscar_fecha(self):
-        print("Escoger orden:  \n")
         print("1- Recientes -> Antiguos")
         print("2- Antiguos -> Recientes")
         orden = int(input('Escoja una opción: '))
@@ -186,22 +189,10 @@ class Menu(Basededatos):
         print(self.dff.head(10))
 
     def Buscar_categoria(self):
-        print("Escoger categoria:  \n")
-        print("1- Ficción ")
-        print("2- Policial")
-        print("3- Lit.cristiana")
-        print("4- Historia")
-        print("5- Informativo")
-        print("6- Aventura")
-        print("7- Romance")
-        print("8- Drama")
-        print("9- Economia")
-        print("10- Literatura")
-        print("11- Psicologia")
-        print("12- Filosofia")
-        print("13- Ciencia")
-        print("14- Recreación")
-        print("15- Terror")
+        print("1-Ficción     || 2-Policial     || 3-Lit.cristiana || 4- Historia ")
+        print("5-Informativo || 6-Aventura     || 7-Romance       || 8-Drama")
+        print("9-Economia    || 10-Literatura  || 11-Psicología   || 12-Filosofía")
+        print("13-Ciencia    || 14-Recreación  || 15-Terror")
         categoria = int(input('Escoja una categoría: '))
 
         if categoria == 1:
@@ -269,19 +260,22 @@ class Menu(Basededatos):
     
     def Recomendar(self):
         while(True):
-            print("-- Descubrir -- ")
+            print("-----------------------------------------------------")
+            print("                   Descubrir                             ")
             print("1- Trending books")
             print("2- Recomendación por categoría")
             print("3- Recomendación por autor")
-            print("4- Regresar")
+            print("4- Atrás")
             recomendacion = int(input('Escoja una opción: '))
             
             if recomendacion == 1:
-                print("- Los libros más populares -")
+                print("-----------------------------------------------------")
+                print("          Los libros más populares                   ")
                 self.recom_populares()
 
             elif recomendacion == 2:
-                print("- Recomendación por categoría -")
+                print("-----------------------------------------------------")
+                print("          Recomendación por categoría                ")
 
                 #importar libro de libros leidos
                 self.archivo_leidos = open("leidos.txt", "r")
@@ -289,7 +283,7 @@ class Menu(Basededatos):
                 self.archivo_leidos.close()
                 self.linea = self.linea.replace("\n", "")  #remplazar el "\n"
                 #encontrar categoria teniendo el titulo
-                self.df2 = self.df1[self.df1['Titulo']==self.linea]['Categoria']
+                self.df2 = self.df1[self.df1['Titulo'] == self.linea]['Categoria']
                 self.df2 = self.df2.head(1)
                 #Se ajustan los datos para obtener un str con el nombre de la categoria
                 self.df2 = self.df2.to_string(index=False)
@@ -297,12 +291,13 @@ class Menu(Basededatos):
                 self.df2 = self.df2.replace(" ", "")
                 #Recomendar por categoria y puntuación
                 self.df2 = self.df1.loc[self.df1['Categoria'] == self.df2]
-                self.df2 = self.df2.sort_values('Puntuación',ascending=False)
+                self.df2 = self.df2.sort_values('Puntuación',ascending = False)
                 self.df2 = self.df2.drop(['Autor'], axis=1)
                 print(self.df2.head(15))
 
             elif recomendacion == 3:
-                print("- Recomendación por autor -")
+                print("-----------------------------------------------------")
+                print("            Recomendación por autor                  ")
 
                 self.archivo_leidos = open("leidos.txt", "r")
                 self.linea = self.archivo_leidos.readline()
@@ -328,21 +323,24 @@ class Menu(Basededatos):
 
     def Menu(self):
         while(True):
-            print("\n* -Menú- * ")
+            print("-----------------------------------------------------")
+            print("                        Menú                       ")
             print("1- Mostrar libros")
             print("2- Buscar")
             print("3- Estante Libros Leídos")
             print("4- Estante Quiero Leer")
             print("5- Descubre")
-            print("6- Salir del menú")
+            print("6- Cerrar Sesión")
             opcion1=int(input("Escoja una opción: "))
         
             if opcion1 == 1:
-                print("- LIBROS -: \n")
+                print("-----------------------------------------------------------------")
+                print("                           LIBROS                                ")
                 self.mostrar_libros()
 
             elif opcion1 == 2:
-                print(" - BUSCAR -")
+                print("-----------------------------------------------------")
+                print("                 - BUSCAR -                          ")
                 self.Buscar()
 
             elif opcion1 == 3:
@@ -352,6 +350,7 @@ class Menu(Basededatos):
                 self.estante_quieroleer()
 
             elif opcion1 == 5:
+                print("-----------------------------------------------------")
                 self.Recomendar()
                 
             elif opcion1 == 6:
