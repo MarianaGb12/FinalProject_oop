@@ -1,6 +1,5 @@
-
-#%%
 import pandas as pd
+
 class Basededatos:
     def __init__(self, df1:str):
         # cargamos la base de datos en el constructor
