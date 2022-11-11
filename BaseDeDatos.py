@@ -9,7 +9,7 @@ class Basededatos:
         """
           cambiamos los nombres de las categorías
           a español para facilitar la comprensión
-          de las recomendaciones.
+          de los filtros y categorías.
         """ 
         self.df1['categories'] = self.df1['categories'].replace({'Fiction':'Ficción','American fiction':'Ficción',
                                             'Detective and mystery stories':'Policial',
