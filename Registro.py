@@ -1,4 +1,4 @@
-from Menu import Menu
+from Menu_secundario import Menu_secundario
 
 class Usuario:
     def __init__(self):
@@ -58,7 +58,7 @@ class Usuario:
     # "Inicio de sesión exitoso"
     def exito_login(self):
         print("Ha ingresado con exito")
-        menu = Menu("")
+        menu = Menu_secundario("")
         menu.Menu()
 
     # "El usuario se ha registrado correctamente"
