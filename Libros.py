@@ -1,4 +1,4 @@
-from DataBase import Basededatos
+from BaseDeDatos import Basededatos
 
 class Libros(Basededatos):
     def __init__(self, df1: str):
