@@ -1,4 +1,4 @@
-from Menu_buscador import Menu
+from App import Menu_principal
 
-search = Menu("")
-search.Buscar()
+user = Menu_principal("")
+user.menu_principal()
