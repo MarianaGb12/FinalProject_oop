@@ -12,8 +12,8 @@ class Menu_principal(App):
 
     def menu_principal(self):
         while (True):
-            print("--------------------------------------------")
-            print("                   BOOKS                    ")
+            print("------------------------------------------------")
+            print("                     BOOKS                      ")
             print("1- Iniciar Sesión")
             print("2- Nuevo Registro")
             print("3- Salir")
