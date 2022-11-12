@@ -19,7 +19,7 @@ class Recomendar(Basededatos):
         if punt == 0:
             self.dfp = self.dfp[self.dfp.Puntuación > 3]
             self.dfp = self.dfp[self.dfp.Puntuación <= 5]
-        print(self.dfp.head(10))
+        print(self.dfp.head(25))
 
     def recom_categoria(self):
 
@@ -39,7 +39,7 @@ class Recomendar(Basededatos):
         self.df2 = self.df1.loc[self.df1['Categoria'] == self.df2]
         self.df2 = self.df2.sort_values('Puntuación', ascending=False)
         self.df2 = self.df2.drop(['Autor'], axis=1)
-        print(self.df2.head(15))
+        print(self.df2.head(25))
 
     def recom_autor(self):
 
@@ -56,7 +56,7 @@ class Recomendar(Basededatos):
         # Recomendar por autor y puntuación
         self.df2 = self.df1.loc[self.df1['Autor'] == self.df2]
         self.df2 = self.df2.sort_values('Puntuación', ascending=False)
-        print(self.df2.head(15))
+        print(self.df2.head(25))
 
     def Recomendar(self):
         while (True):
