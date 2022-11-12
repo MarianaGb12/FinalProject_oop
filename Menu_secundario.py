@@ -29,8 +29,6 @@ class Menu_secundario:
                 mostrar.mostrar_libros()
 
             elif opcion1 == 2:
-                print("-----------------------------------------------------")
-                print("                 - BUSCAR -                          ")
                 buscar = Buscador("")
                 buscar.Buscar()
 
