@@ -1,5 +1,6 @@
 from BaseDeDatos import Basededatos
 
+
 class Buscador(Basededatos):
     def __init__(self, df1: str):
         super().__init__(df1)
@@ -7,8 +8,9 @@ class Buscador(Basededatos):
     def Buscar_puntuacion(self):
         puntaje = int(input('Ingrese un puntaje (De 1-5): '))
         # se buscan libros dependiendo de la puntuación ingresada
-        self.dfe = self.df1.sort_values('Puntuación',ascending = False)
-        self.dfe = self.dfe.drop(['Autor','Categoria','Año_publicado'], axis = 1)
+        self.dfe = self.df1.sort_values('Puntuación', ascending=False)
+        self.dfe = self.dfe.drop(
+            ['Autor', 'Categoria', 'Año_publicado'], axis=1)
 
         if puntaje == 1:
             self.dfe = self.dfe[self.dfe.Puntuación < 2]
@@ -40,76 +42,81 @@ class Buscador(Basededatos):
         print("1- Recientes -> Antiguos")
         print("2- Antiguos -> Recientes")
         orden = int(input('Escoja una opción: '))
-        
-        self.dff = self.df1.drop(['Autor','Categoria','Puntuación'], axis = 1)
-        
+
+        self.dff = self.df1.drop(['Autor', 'Categoria', 'Puntuación'], axis=1)
+
         if orden == 1:
-            self.dff = self.dff.sort_values('Año_publicado', ascending = False)
-        
+            self.dff = self.dff.sort_values('Año_publicado', ascending=False)
+
         elif orden == 2:
             self.dff = self.dff.sort_values('Año_publicado')
 
         print(self.dff.head(10))
 
     def Buscar_categoria(self):
-        
+
         print("1-Ficción     || 2-Policial     || 3-Lit.cristiana || 4- Historia ")
         print("5-Informativo || 6-Aventura     || 7-Romance       || 8-Drama")
         print("9-Economia    || 10-Literatura  || 11-Psicología   || 12-Filosofía")
         print("13-Ciencia    || 14-Recreación  || 15-Terror")
         categoria = int(input('Escoja una categoría: '))
-        
+
         """
          si la categoria ingresada coincide con la categoria de 
          la base de datos, entonces se muestran los títulos
          pertenecientes a tal categoría.
         """
-        
+
         if categoria == 1:
-            self.dfc=self.df1[self.df1['Categoria'] == 'Ficción']['Titulo']
+            self.dfc = self.df1[self.df1['Categoria'] == 'Ficción']['Titulo']
 
         elif categoria == 2:
-            self.dfc=self.df1[self.df1['Categoria'] == 'Policial']['Titulo']
+            self.dfc = self.df1[self.df1['Categoria'] == 'Policial']['Titulo']
 
         elif categoria == 3:
-            self.dfc=self.df1[self.df1['Categoria'] == 'Lit.cristiana']['Titulo']
+            self.dfc = self.df1[self.df1['Categoria']
+                                == 'Lit.cristiana']['Titulo']
 
         elif categoria == 4:
-            self.dfc=self.df1[self.df1['Categoria'] == 'Historia']['Titulo']
+            self.dfc = self.df1[self.df1['Categoria'] == 'Historia']['Titulo']
 
         elif categoria == 5:
-            self.dfc=self.df1[self.df1['Categoria'] == 'Informativo']['Titulo']
+            self.dfc = self.df1[self.df1['Categoria']
+                                == 'Informativo']['Titulo']
 
-        elif categoria == 6:                                                 
-            self.dfc=self.df1[self.df1['Categoria'] == 'Aventura']['Titulo']
+        elif categoria == 6:
+            self.dfc = self.df1[self.df1['Categoria'] == 'Aventura']['Titulo']
 
         elif categoria == 7:
-            self.dfc=self.df1[self.df1['Categoria'] == 'Romance']['Titulo']
+            self.dfc = self.df1[self.df1['Categoria'] == 'Romance']['Titulo']
 
         elif categoria == 8:
-            self.dfc=self.df1[self.df1['Categoria'] == 'Drama']['Titulo']
+            self.dfc = self.df1[self.df1['Categoria'] == 'Drama']['Titulo']
 
         elif categoria == 9:
-            self.dfc=self.df1[self.df1['Categoria'] == 'Economia']['Titulo']
+            self.dfc = self.df1[self.df1['Categoria'] == 'Economia']['Titulo']
 
         elif categoria == 10:
-            self.dfc=self.df1[self.df1['Categoria'] == 'Literatura']['Titulo']
+            self.dfc = self.df1[self.df1['Categoria']
+                                == 'Literatura']['Titulo']
 
         elif categoria == 11:
-            self.dfc=self.df1[self.df1['Categoria'] == 'Psicologia']['Titulo']
+            self.dfc = self.df1[self.df1['Categoria']
+                                == 'Psicologia']['Titulo']
 
         elif categoria == 12:
-            self.dfc=self.df1[self.df1['Categoria'] == 'Filosofia']['Titulo']
+            self.dfc = self.df1[self.df1['Categoria'] == 'Filosofia']['Titulo']
 
         elif categoria == 13:
-            self.dfc=self.df1[self.df1['Categoria'] == 'Ciencia']['Titulo']
+            self.dfc = self.df1[self.df1['Categoria'] == 'Ciencia']['Titulo']
 
         elif categoria == 14:
-            self.dfc=self.df1[self.df1['Categoria'] == 'Recreacion']['Titulo']
+            self.dfc = self.df1[self.df1['Categoria']
+                                == 'Recreacion']['Titulo']
 
         elif categoria == 15:
-            self.dfc=self.df1[self.df1['Categoria'] == 'Terror']['Titulo']
-            
+            self.dfc = self.df1[self.df1['Categoria'] == 'Terror']['Titulo']
+
         print(self.dfc.head(10))
 
     def Buscar(self):
@@ -120,21 +127,21 @@ class Buscador(Basededatos):
         el usuario, fecha de publicación, 
         o por categoría.
         """
-        while(True):
+        while (True):
             print("1- Buscar por título")
             print("2- Buscar por puntuación")
             print("3- Buscar por fecha de publicación")
             print("4- Buscar por categoría")
             print("5- Atrás")
             filtro = int(input("Escoja una opción: "))
-            
+
             if filtro == 1:
                 print("-----------------------------------------------------")
                 print("               Buscar por título                     ")
                 titulo = input("Ingrese título: ")
                 self.dfb = self.df1.loc[self.df1['Titulo'] == titulo]
                 print(self.dfb.head(10))
-            
+
             elif filtro == 2:
                 print("-----------------------------------------------------")
                 print("             Buscar por puntuación                   ")
