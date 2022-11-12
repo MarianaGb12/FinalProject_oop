@@ -6,7 +6,7 @@ class Libros(Basededatos):
 
     def mostrar_libros(self):
         # aparecen lista de libros en consola
-        print(self.df1.head(15))
+        print(self.df1.head(30))
         """
         Menú para que el usuario lea 
         o modifique la estantería de libros.
