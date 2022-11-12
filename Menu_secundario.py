@@ -25,23 +25,25 @@ class Menu_secundario:
                     "-----------------------------------------------------------------")
                 print(
                     "                           LIBROS                                ")
-                mostrar = Libros()
+                mostrar = Libros("")
                 mostrar.mostrar_libros()
 
             elif opcion1 == 2:
                 print("-----------------------------------------------------")
                 print("                 - BUSCAR -                          ")
-                buscar = Buscador()
+                buscar = Buscador("")
                 buscar.Buscar()
 
             elif opcion1 == 3:
+                mostrar = Libros("")
                 mostrar.estante_leidos()
 
             elif opcion1 == 4:
+                mostrar = Libros("")
                 mostrar.estante_quieroleer()
 
             elif opcion1 == 5:
-                recomendar = Recomendar()
+                recomendar = Recomendar("")
                 recomendar.Recomendar()
 
             elif opcion1 == 6:
