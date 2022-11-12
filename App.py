@@ -1,15 +1,17 @@
 from Registro import Usuario
 
+
 class App:
-    def __init__(self, Opcion:int):
+    def __init__(self, Opcion: int):
         self.Opcion = Opcion
+
 
 class Menu_principal(App):
     def __init__(self, Opcion):
         super().__init__(Opcion)
 
     def menu_principal(self):
-        while(True):
+        while (True):
             print("--------------------------------------------")
             print("                   BOOKS                    ")
             print("1- Iniciar Sesión")
