@@ -41,7 +41,7 @@ class Usuario:
         encuentre en el archivo.
         Si es asi, se verifica la 
         contraseña en el mismo. Si 
-        esta no es la misma, arroja 
+        esta no es igual, arroja 
         un error para el nombre de 
         usuario o contraseña ingresados. 
         """
@@ -57,8 +57,8 @@ class Usuario:
 
     # "Inicio de sesión exitoso"
     def exito_login(self):
-        print("Ha ingresado con exito")
-        menu = Menu_secundario("")
+        print("Ha ingresado con éxito")
+        menu = Menu_secundario()
         menu.Menu()
 
     # "El usuario se ha registrado correctamente"
