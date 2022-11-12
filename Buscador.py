@@ -11,7 +11,7 @@ class Buscador(Basededatos):
         print(self.dfb.head(20))
         
     def Buscar_puntuacion(self):
-        puntaje = int(input('Ingrese un puntaje (De 1-5): '))
+        puntaje = int(input('Ingrese un puntaje (De 0-5): '))
         # se buscan libros dependiendo de la puntuación ingresada
         self.dfe = self.df1.sort_values('Puntuación', ascending=False)
         self.dfe = self.dfe.drop(
