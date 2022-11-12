@@ -4,7 +4,12 @@ from BaseDeDatos import Basededatos
 class Buscador(Basededatos):
     def __init__(self, df1: str):
         super().__init__(df1)
-
+        
+    def Buscar_titulo(self):
+        titulo = input("Ingrese título: ")
+        self.dfb = self.df1.loc[self.df1['Titulo'] == titulo]
+        print(self.dfb.head(20))
+        
     def Buscar_puntuacion(self):
         puntaje = int(input('Ingrese un puntaje (De 1-5): '))
         # se buscan libros dependiendo de la puntuación ingresada
@@ -13,29 +18,31 @@ class Buscador(Basededatos):
             ['Autor', 'Categoria', 'Año_publicado'], axis=1)
 
         if puntaje == 1:
-            self.dfe = self.dfe[self.dfe.Puntuación < 2]
-            self.dfe = self.dfe[self.dfe.Puntuación >= 1]
+            print("No hay libros con puntuación de 1")
 
         elif puntaje == 2:
             self.dfe = self.dfe[self.dfe.Puntuación < 3]
             self.dfe = self.dfe[self.dfe.Puntuación >= 2]
+            print(self.dfe.head(10))
 
         elif puntaje == 3:
             self.dfe = self.dfe[self.dfe.Puntuación < 4]
             self.dfe = self.dfe[self.dfe.Puntuación >= 3]
+            print(self.dfe.head(10))
 
         elif puntaje == 4:
             self.dfe = self.dfe[self.dfe.Puntuación < 5]
             self.dfe = self.dfe[self.dfe.Puntuación >= 4]
+            print(self.dfe.head(10))
 
         elif puntaje == 5:
             self.dfe = self.dfe[self.dfe.Puntuación == 5]
+            print(self.dfe.head(10))
 
         elif puntaje == 0:
             self.dfe = self.dfe[self.dfe.Puntuación < 1]
             self.dfe = self.dfe[self.dfe.Puntuación >= 0]
-
-        print(self.dfe.head(10))
+            print(self.dfe.head(10))
 
     def Buscar_fecha(self):
         # opción de buscar por más reciente o antiguo.
@@ -138,9 +145,7 @@ class Buscador(Basededatos):
             if filtro == 1:
                 print("-----------------------------------------------------")
                 print("               Buscar por título                     ")
-                titulo = input("Ingrese título: ")
-                self.dfb = self.df1.loc[self.df1['Titulo'] == titulo]
-                print(self.dfb.head(10))
+                self.Buscar_titulo()
 
             elif filtro == 2:
                 print("-----------------------------------------------------")
