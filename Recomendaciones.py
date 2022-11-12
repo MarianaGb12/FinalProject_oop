@@ -23,12 +23,12 @@ class Recomendar(Basededatos):
 
     def recom_categoria(self):
 
-        # importar libro de libros leidos
+        # Importar un libro de libros leidos
         self.archivo_leidos = open("leidos.txt", "r")
         self.linea = self.archivo_leidos.readline()
         self.archivo_leidos.close()
         self.linea = self.linea.replace("\n", "")  # remplazar el "\n"
-        # encontrar categoria teniendo el titulo
+        # Encontrar categoria del libro importado
         self.df2 = self.df1[self.df1['Titulo'] == self.linea]['Categoria']
         self.df2 = self.df2.head(1)
         # Se ajustan los datos para obtener un str con el nombre de la categoria
@@ -47,7 +47,7 @@ class Recomendar(Basededatos):
         self.linea = self.archivo_leidos.readline()
         self.archivo_leidos.close()
         self.linea = self.linea.replace("\n", "")  # remplazar el "\n"
-        # encontrar autor teniendo el titulo
+        # Encontrar autor del libro importado
         self.df2 = self.df1[self.df1['Titulo'] == self.linea]['Autor']
         self.df2 = self.df2.head(1)
         # Se ajustan los datos para obtener un str con el nombre del autor
