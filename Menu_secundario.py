@@ -1,6 +1,7 @@
 from Libros import Libros
 from Recomendaciones import Recomendar
-from Buscador import Buscador 
+from Buscador import Buscador
+
 
 class Menu_secundario:
     def __init__(self):
@@ -8,7 +9,7 @@ class Menu_secundario:
 
     def Menu(self):
         # Menú para la opciones que se pueden realizar en el programa
-        while(True):
+        while (True):
             print("-----------------------------------------------------")
             print("                        Menú                       ")
             print("1- Mostrar libros")
@@ -17,11 +18,13 @@ class Menu_secundario:
             print("4- Estante Quiero Leer")
             print("5- Descubre")
             print("6- Cerrar Sesión")
-            opcion1=int(input("Escoja una opción: "))
-        
+            opcion1 = int(input("Escoja una opción: "))
+
             if opcion1 == 1:
-                print("-----------------------------------------------------------------")
-                print("                           LIBROS                                ")
+                print(
+                    "-----------------------------------------------------------------")
+                print(
+                    "                           LIBROS                                ")
                 mostrar = Libros()
                 mostrar.mostrar_libros()
 
@@ -33,7 +36,7 @@ class Menu_secundario:
 
             elif opcion1 == 3:
                 mostrar.estante_leidos()
-                
+
             elif opcion1 == 4:
                 mostrar.estante_quieroleer()
 
@@ -41,10 +44,9 @@ class Menu_secundario:
                 print("-----------------------------------------------------")
                 recomendar = Recomendar()
                 recomendar.Recomendar()
-                
+
             elif opcion1 == 6:
                 break
 
             else:
                 print("Opción no válida")
-
