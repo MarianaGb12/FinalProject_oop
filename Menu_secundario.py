@@ -41,7 +41,6 @@ class Menu_secundario:
                 mostrar.estante_quieroleer()
 
             elif opcion1 == 5:
-                print("-----------------------------------------------------")
                 recomendar = Recomendar()
                 recomendar.Recomendar()
 
