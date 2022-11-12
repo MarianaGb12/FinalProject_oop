@@ -135,6 +135,8 @@ class Buscador(Basededatos):
         o por categoría.
         """
         while (True):
+            print("-----------------------------------------------------")
+            print("                 - BUSCAR -                          ")
             print("1- Buscar por título")
             print("2- Buscar por puntuación")
             print("3- Buscar por fecha de publicación")
