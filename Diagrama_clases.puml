@@ -1,0 +1,68 @@
+@startuml
+
+class Usuario{
++nomusuario: str
++contraseña: str
++Registro()
++Registro_usuario()
++Verifica_login()
++exito_login()
++exito_registro()
++no_cont()
++no_usuario()
+}
+
+class Libros {
++mostrar_libros()
++estante_leidos: List (leidos)
++estante_quieroleer: List (quiero_leer)
+}
+
+class Menu_secundario{
++Menu()
+}
+
+class Buscador {
++Buscar_Titulo()
++Buscar_puntuacion()
++Buscar_fecha()
++Buscar_categoria()
++Buscar()
+}
+
+class BaseDeDatos{
++df1 : str
+}
+
+class App{
++Opcion : int
+}
+
+class Menu_principal{
++menu_principal()
+}
+class Recomendar{
++recom_populares()
++recom_categoria()
++recom_autor()
++recomendar()
+}
+
+
+skinparam groupInheritance 1
+App <|.down.. Menu_principal
+
+Usuario"1" -left-o  "1"Menu_principal
+
+Menu_secundario <-left- Usuario
+
+Recomendar .down. Menu_secundario
+Buscador .down. Menu_secundario 
+Libros .down. Menu_secundario
+
+skinparam groupInheritance 3
+BaseDeDatos <|-- Buscador : < utiliza
+BaseDeDatos <|-- Recomendar: < utiliza
+BaseDeDatos <|-- Libros: < utiliza
+
+@enduml
