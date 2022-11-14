@@ -14,7 +14,7 @@ Los usuarios podrán:
 -	Acceder a una lista de libros completa.
 -	Agregar libros que ha leído a su estantería digital.
 -	Agregar libros que desea leer a su estantería digital.
--	Buscar lecturas por medio del título, autor o categoría existente. 
+-	Buscar lecturas por medio del título, autor, fecha de publicación o categoría existente. 
 -	Observar las recomendaciones de lecturas que cuentan con mayor popularidad a nivel global.
 -	Pedir recomendaciones por autor o categoría, dependiendo de lo que se ha guardado en su estantería digital de libros leídos. 
 
@@ -27,16 +27,16 @@ Los usuarios podrán:
 
 Para hacer uso del programa se debe contar con los siguientes requerimientos:
 
-1.Primero, debe cerciorarse de que la versión de `python3` con la que cuenta es 3.9.12 o mayor: `python3 --version`. Si en dado caso, la respuesta a lo anterior es negativa, debe actualizar el intérprete de Python.  
+1. Primero, debe cerciorarse de que la versión de `python3` con la que cuenta es 3.9.12 o mayor: `python3 --version`. Si en dado caso, la respuesta a lo anterior es negativa, debe actualizar el intérprete de Python.  
 
-2.Luego, debe instalar [Pandas](https://pandas.pydata.org/). Pandas es una librería de Python especializada en la manipulación y el análisis de datos. La forma más sencilla de realizarlo es a través del siguiente comando en la terminal
+2. Luego, debe instalar [Pandas](https://pandas.pydata.org/). Pandas es una librería de Python especializada en la manipulación y el análisis de datos. La forma más sencilla de realizarlo, es a través del siguiente comando en la terminal
   ```
   pip install pandas 
   ```
-3.Clone el repositorio en una cárpeta en su computadora. Escribiendo el siguiente comando en la terminal: 
+3. Clone el repositorio en la carpeta deseada. Escribiendo el siguiente comando en la terminal: 
   ```
   git clone https://github.com/MarianaGb12/FinalProject_oop.git
   ```
- 4.Abra el repositorio antes clonado en VSCode
+ 4. Abra el repositorio antes clonado en VSCode
  
- Una vez que haya realizado todas las instrucciones antes descritas, usted debería poder probar todas las funcionalidades que la aplicación ofrece. 
+ Una vez haya realizado todas las instrucciones antes descritas, debería poder probar todas las funcionalidades que la aplicación ofrece. 
