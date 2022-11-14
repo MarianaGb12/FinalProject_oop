@@ -9,6 +9,14 @@ Books es una aplicación de escritorio, la cual tiene como intención, crear un 
 ![image](https://user-images.githubusercontent.com/98919850/201759755-7661114f-00ca-4300-a6bf-02b3ec758bf8.png)
 
 ## Listado de funcionalidades
+Los usuarios podrán: 
+-	Acceder a la aplicación mediante una cuenta de usuario.
+-	Acceder a una lista de libros completa.
+-	Agregar libros que ha leído a su estantería digital.
+-	Agregar libros que desea leer a su estantería digital.
+-	Buscar lecturas por medio del título, autor o categoría existente. 
+-	Observar las recomendaciones de lecturas que cuentan con mayor popularidad a nivel global.
+-	Pedir recomendaciones por autor o categoría, dependiendo de lo que se ha guardado en su estantería digital de libros leídos. 
 
 
 ## Ejemplo guiado de ejecución
