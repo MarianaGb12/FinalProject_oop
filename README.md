@@ -5,9 +5,6 @@ Realizado por Mariana Guerrero y Sergio Rodriguez.
 
 Books es una aplicación de escritorio, la cual tiene como intención, crear un espacio en donde las personas encuentren variadas lecturas de acuerdo con sus gustos afines. 
 
-## Diagrama de clases Uml
-![image](https://user-images.githubusercontent.com/98919850/201759755-7661114f-00ca-4300-a6bf-02b3ec758bf8.png)
-
 ## Listado de funcionalidades
 Los usuarios podrán: 
 -	Acceder a la aplicación mediante una cuenta de usuario.
@@ -18,6 +15,8 @@ Los usuarios podrán:
 -	Observar las recomendaciones de lecturas que cuentan con mayor popularidad a nivel global.
 -	Pedir recomendaciones por autor o categoría, dependiendo de lo que se ha guardado en su estantería digital de libros leídos. 
 
+## Diagrama de clases Uml
+![image](https://user-images.githubusercontent.com/98919850/201759755-7661114f-00ca-4300-a6bf-02b3ec758bf8.png)
 
 ## Ejemplo guiado de ejecución
 
