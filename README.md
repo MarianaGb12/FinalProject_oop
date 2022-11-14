@@ -4,6 +4,10 @@
 Realizado por Mariana Guerrero y Sergio Rodriguez.
 
 BOOKS es una aplicación de escritorio, la cual tiene como intención, crear un espacio en donde las personas encuentren variadas lecturas de acuerdo con sus gustos afines. 
+
+## Material de soporte 
+Estaremos implementando una [Base de datos](https://www.kaggle.com/code/spiderkomik/books-recommendation-system) de libros, con el fin de tener una gran variedad de lecturas, las cuales podamos utilizar para realizar las funcionalidades que ofrecerá el proyecto. 
+
 ## Tecnologías Implementadas
 - Python 3.9.12 o mayor que este. 
 - Librería de Pandas. 
