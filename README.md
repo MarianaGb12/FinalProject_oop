@@ -4,6 +4,9 @@
 Realizado por Mariana Guerrero y Sergio Rodriguez.
 
 Books es una aplicación de escritorio, la cual tiene como intención, crear un espacio en donde las personas encuentren variadas lecturas de acuerdo con sus gustos afines. 
+## Tecnologías Implementadas
+- Python 3.9.12 o mayor que este. 
+- Librería de Pandas. 
 
 ## Listado de funcionalidades
 Los usuarios podrán: 
@@ -17,9 +20,6 @@ Los usuarios podrán:
 
 ## Diagrama de clases Uml
 ![image](https://user-images.githubusercontent.com/98919850/201759755-7661114f-00ca-4300-a6bf-02b3ec758bf8.png)
-
-## Ejemplo guiado de ejecución
-
 
 ## Proceso de instalación
 ### *Requerimientos
