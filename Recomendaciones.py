@@ -22,7 +22,13 @@ class Recomendar(Basededatos):
         print(self.dfp.head(25))
 
     def recom_categoria(self):
-
+        """ 
+        Recomendación por categoría: 
+        Recomienda al usuario libros 
+        que tienen misma categoría 
+        tomando los libros del archivo
+        de libros leídos.
+        """
         # Importar un libro de libros leidos
         self.archivo_leidos = open("leidos.txt", "r")
         self.linea = self.archivo_leidos.readline()
@@ -42,7 +48,12 @@ class Recomendar(Basededatos):
         print(self.df2.head(25))
 
     def recom_autor(self):
-
+        """ 
+        Recomendación por autor: 
+        Recomienda al usuario libros 
+        del mismo autor tomando los 
+        del archivo de libros leídos.
+        """
         self.archivo_leidos = open("leidos.txt", "r")
         self.linea = self.archivo_leidos.readline()
         self.archivo_leidos.close()
