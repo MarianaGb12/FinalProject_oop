@@ -4,6 +4,55 @@ from BaseDeDatos import Basededatos
 class Buscador(Basededatos):
     def __init__(self, df1: str):
         super().__init__(df1)
+
+    def Buscar(self):
+        """
+        Menú para el buscador de libros.
+        Se aplica por diferentes campos, como por:
+        - Título
+        - Puntuación ingresada por el usuario
+        - Fecha de publicación 
+        - Categoría
+        """
+        while (True):
+            try:
+                print("\n-----------------------------------------------------")
+                print("                 - BUSCAR -                          \n")
+                print("1- Buscar por título")
+                print("2- Buscar por puntuación")
+                print("3- Buscar por fecha de publicación")
+                print("4- Buscar por categoría")
+                print("5- Atrás")
+                filtro = int(input("Escoja una opción: "))
+
+                if filtro == 1:
+                    print("\n-----------------------------------------------------")
+                    print("               Buscar por título                     ")
+                    self.Buscar_titulo()
+
+                elif filtro == 2:
+                    print("\n-----------------------------------------------------")
+                    print("             Buscar por puntuación                   ")
+                    self.Buscar_puntuacion()
+
+                elif filtro == 3:
+                    print("\n-----------------------------------------------------")
+                    print("        Buscar por fecha de publicación              ")
+                    self.Buscar_fecha()
+
+                elif filtro == 4:
+                    print("\n-----------------------------------------------------")
+                    print("               Buscar Categoria                      ")
+                    self.Buscar_categoria()
+
+                elif filtro == 5:
+                    break
+
+                else:
+                    print(f"\nOpción invalida, por favor vuelva a escoger una opción:\n")
+
+            except ValueError as e:
+                print(f"\nNo se ingresó ninguna opción.\nError: {e}\n")
         
     def Buscar_titulo(self):
         titulo = input("Ingrese título: ")
@@ -81,15 +130,13 @@ class Buscador(Basededatos):
             self.dfc = self.df1[self.df1['Categoria'] == 'Policial']['Titulo']
 
         elif categoria == 3:
-            self.dfc = self.df1[self.df1['Categoria']
-                                == 'Lit.cristiana']['Titulo']
+            self.dfc = self.df1[self.df1['Categoria'] == 'Lit.cristiana']['Titulo']
 
         elif categoria == 4:
             self.dfc = self.df1[self.df1['Categoria'] == 'Historia']['Titulo']
 
         elif categoria == 5:
-            self.dfc = self.df1[self.df1['Categoria']
-                                == 'Informativo']['Titulo']
+            self.dfc = self.df1[self.df1['Categoria'] == 'Informativo']['Titulo']
 
         elif categoria == 6:
             self.dfc = self.df1[self.df1['Categoria'] == 'Aventura']['Titulo']
@@ -104,12 +151,10 @@ class Buscador(Basededatos):
             self.dfc = self.df1[self.df1['Categoria'] == 'Economia']['Titulo']
 
         elif categoria == 10:
-            self.dfc = self.df1[self.df1['Categoria']
-                                == 'Literatura']['Titulo']
+            self.dfc = self.df1[self.df1['Categoria'] == 'Literatura']['Titulo']
 
         elif categoria == 11:
-            self.dfc = self.df1[self.df1['Categoria']
-                                == 'Psicologia']['Titulo']
+            self.dfc = self.df1[self.df1['Categoria'] == 'Psicologia']['Titulo']
 
         elif categoria == 12:
             self.dfc = self.df1[self.df1['Categoria'] == 'Filosofia']['Titulo']
@@ -118,54 +163,10 @@ class Buscador(Basededatos):
             self.dfc = self.df1[self.df1['Categoria'] == 'Ciencia']['Titulo']
 
         elif categoria == 14:
-            self.dfc = self.df1[self.df1['Categoria']
-                                == 'Recreacion']['Titulo']
+            self.dfc = self.df1[self.df1['Categoria'] == 'Recreacion']['Titulo']
 
         elif categoria == 15:
             self.dfc = self.df1[self.df1['Categoria'] == 'Terror']['Titulo']
 
         print(self.dfc.head(10))
 
-    def Buscar(self):
-        """
-        Menú para el buscador de libros.
-        Se aplica por diferentes campos:
-        título, puntuación ingresada por 
-        el usuario, fecha de publicación, 
-        o por categoría.
-        """
-        while (True):
-            print("-----------------------------------------------------")
-            print("                 - BUSCAR -                          ")
-            print("1- Buscar por título")
-            print("2- Buscar por puntuación")
-            print("3- Buscar por fecha de publicación")
-            print("4- Buscar por categoría")
-            print("5- Atrás")
-            filtro = int(input("Escoja una opción: "))
-
-            if filtro == 1:
-                print("-----------------------------------------------------")
-                print("               Buscar por título                     ")
-                self.Buscar_titulo()
-
-            elif filtro == 2:
-                print("-----------------------------------------------------")
-                print("             Buscar por puntuación                   ")
-                self.Buscar_puntuacion()
-
-            elif filtro == 3:
-                print("-----------------------------------------------------")
-                print("        Buscar por fecha de publicación              ")
-                self.Buscar_fecha()
-
-            elif filtro == 4:
-                print("-----------------------------------------------------")
-                print("               Buscar Categoria                      ")
-                self.Buscar_categoria()
-
-            elif filtro == 5:
-                break
-
-            else:
-                print("Opción no válida")

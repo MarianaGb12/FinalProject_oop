@@ -4,8 +4,7 @@ import pandas as pd
 class Basededatos:
     def __init__(self, df1: str):
         # cargamos la base de datos en el constructor
-        self.df1 = pd.read_csv(
-            'https://drive.google.com/uc?export=download&id=1ak6fsjArzXSFHh0cpycCx58lAJvcrV4Q')
+        self.df1 = pd.read_csv('DB/books.csv')
         # eliminamos los filtros de la base de datos que no necesitamos
         self.df1 = self.df1.drop(['subtitle', 'description', 'isbn13',
                                  'isbn10', 'num_pages', 'ratings_count', 'thumbnail'], axis=1)
